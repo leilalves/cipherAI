@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher - Agnes Dim</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="app-layout" id="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="app-brand"><a href="index.html">Cipher</a></h2>
+                <div class="header-icons">
+                    <button class="icon-btn" aria-label="Pesquisar">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #f4f3e8;"></i>
+                    </button>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa-regular fa-folder" style="color: #f4f3e8;"></i> Projetos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-briefcase" style="color: #f4f3e8;"></i> Personificação
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="recents-section">
+                    <span class="recents-title">Recentes</span>
+                    <ul>
+                        <li><a href="chat-incel.html" class="link-celibato">Celibato involuntário</a></li>
+                        <li><a href="chat-relacionamentos.html" class="link-relacionamentos">Relacionamentos</a></li>
+                        <li><a href="chat-agnes.html" class="link-agnes active-chat">Agnes Dim</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content chat-page-content">
+            <div class="chat-history">
+                <div class="msg-bubble msg-user">
+                    <p>Só tenho uma foto dela. Nunca conversamos...</p>
+                </div>
+
+                <div class="msg-bubble msg-ai">
+                    <p>Pode mandar! Vou analisar a foto e tentar achar interesses em potencial.</p>
+                </div>
+
+                <div class="msg-bubble msg-user msg-image-bubble">
+                    <img src="assets/img/agnes.png" alt="Foto de Agnes Dim" class="agnes-photo" data-target="agnes-perfil.html">
+                </div>
+            </div>
+
+            <div class="input-box">
+                <button class="btn-plus">
+                    <i class="fa-solid fa-plus" style="color: #f4f3e8;"></i>
+                </button>
+                <input type="text" class="prompt-input" placeholder="Faça um pedido">
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

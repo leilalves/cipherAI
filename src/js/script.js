@@ -185,3 +185,80 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// =========================================
+    const carouselTrack = document.getElementById('missing-carousel-track');
+    const prevPosterBtn = document.querySelector('.prev-poster');
+    const nextPosterBtn = document.querySelector('.next-poster');
+    const dotsContainer = document.getElementById('missing-carousel-dots');
+
+    if (carouselTrack && prevPosterBtn && nextPosterBtn) {
+        const slides = Array.from(carouselTrack.children);
+        let currentIndex = 0;
+
+        function getVisibleCount() {
+            if (window.innerWidth <= 600) return 1;
+            if (window.innerWidth <= 900) return 2;
+            return 3;
+        }
+
+        function getMaxIndex() {
+            return Math.max(0, slides.length - getVisibleCount());
+        }
+
+        function buildDots() {
+            if (!dotsContainer) return;
+            dotsContainer.innerHTML = '';
+            const totalSteps = getMaxIndex() + 1;
+
+            for (let i = 0; i < totalSteps; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'carousel-dot' + (i === currentIndex ? ' active' : '');
+                dot.setAttribute('aria-label', `Ir para grupo ${i + 1}`);
+                dot.addEventListener('click', () => {
+                    currentIndex = i;
+                    updateCarousel();
+                });
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function updateCarousel() {
+            const maxIdx = getMaxIndex();
+            if (currentIndex > maxIdx) currentIndex = maxIdx;
+            if (currentIndex < 0) currentIndex = 0;
+
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            const gap = 28;
+            const offset = currentIndex * (slideWidth + gap);
+
+            carouselTrack.style.transform = `translateX(-${offset}px)`;
+
+            if (dotsContainer) {
+                const dots = dotsContainer.querySelectorAll('.carousel-dot');
+                dots.forEach((dot, idx) => {
+                    dot.classList.toggle('active', idx === currentIndex);
+                });
+            }
+        }
+
+        prevPosterBtn.addEventListener('click', () => {
+            const maxIdx = getMaxIndex();
+            currentIndex = currentIndex > 0 ? currentIndex - 1 : maxIdx;
+            updateCarousel();
+        });
+
+        nextPosterBtn.addEventListener('click', () => {
+            const maxIdx = getMaxIndex();
+            currentIndex = currentIndex < maxIdx ? currentIndex + 1 : 0;
+            updateCarousel();
+        });
+
+        window.addEventListener('resize', () => {
+            buildDots();
+            updateCarousel();
+        });
+
+        buildDots();
+        updateCarousel();
+    }

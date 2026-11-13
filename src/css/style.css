@@ -2,18 +2,14 @@
 
 @font-face {
   font-family: 'AquilineTwo';
-  src: url('../assets/fonts/AquilineTwo-Regular.woff2') format('woff2'),
-       url('../assets/fonts/AquilineTwo-Regular.woff') format('woff');
-  font-weight: 400;
+  src: url('../assets/fonts/AquilineTwo.ttf') format('opentype');
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'IT Cathdra Demo';
-  src: url('../assets/fonts/ITCathdraDemo-Regular.woff2') format('woff2'),
-       url('../assets/fonts/ITCathdraDemo-Regular.woff') format('woff');
-  font-weight: 400;
+  src: url('../assets/fonts/ItCathdraDemoRegular-q2nLl.woff2') format('woff2');
   font-style: normal;
   font-display: swap;
 }
@@ -21,7 +17,6 @@
 @font-face {
   font-family: 'OT Squeezed';
   src: url('../assets/fonts/OTNeueMontreal-BoldSqueezed.woff2') format('woff2');
-  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -29,7 +24,6 @@
 @font-face {
   font-family: 'OT Extra Squeezed';
   src: url('../assets/fonts/OTNeueMontreal-BookExtraSqueezed.woff2') format('woff2');
-  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -37,7 +31,6 @@
 @font-face {
   font-family: 'OT Medium Semi';
   src: url('../assets/fonts/OTNeueMontreal-MediumSemiSqueezed.woff2') format('woff2');
-  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -45,7 +38,6 @@
 @font-face {
   font-family: 'OT Semibold';
   src: url('../assets/fonts/OTNeueMontreal-SemiBoldUltraSqueezed.woff2') format('woff2');
-  font-weight: 600;
   font-style: normal;
   font-stretch: ultra-condensed;
   font-display: swap;
@@ -54,7 +46,6 @@
 @font-face {
   font-family: 'FL Prefere';
   src: url('../assets/fonts/FLPrefere-DEMO-Heavy.woff2') format('woff2');
-  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -62,7 +53,6 @@
 @font-face {
   font-family: 'Druk Cond';
   src: url('../assets/fonts/DrukCond-Super-Trial.woff2') format('woff2');
-  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -71,7 +61,6 @@
   font-family: 'Stamp RSPK One';
   src: url('../assets/fonts/StampRSPKOne-Light.woff2') format('woff2'),
        url('../assets/fonts/StampRSPKOne-Light.woff') format('woff');
-  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
@@ -241,7 +230,6 @@ body {
 }
 
 .footer-left .brand {
-    font-weight: bold;
     margin-top: 5px;
 }
 
@@ -311,7 +299,6 @@ body {
 
 .app-brand {
     font-size: 1.8rem;
-    font-weight: bold;
 }
 
 .header-icons {
@@ -458,7 +445,6 @@ body {
 
 .response-title {
     font-family: var(--font-condensed);
-    font-weight: 600;
     font-stretch: ultra-condensed;
     font-size: 2.2rem;
     letter-spacing: 0.5px;
@@ -803,7 +789,6 @@ body.card-cipher-page {
 .cipher-title {
     font-family: 'OT Extra Squeezed';
     font-size: 4rem;
-    font-weight: 800;
     letter-spacing: -1px;
     margin: 0 0 6px 0;
     line-height: 1.05;
@@ -813,7 +798,6 @@ body.card-cipher-page {
 .cipher-subtitle {
     font-family: 'OT Squeezed';
     font-size: 1.7rem;
-    font-weight: 700;
     margin: 0 0 12px 0;
 }
 
@@ -824,7 +808,6 @@ body.card-cipher-page {
 .cipher-highlights p {
     font-family: 'OT Squeezed';
     font-size: 2.3rem;
-    font-weight: 800;
     letter-spacing: -0.8px;
     margin: 4px 0;
     line-height: 1.1;
@@ -834,7 +817,6 @@ body.card-cipher-page {
 .cipher-desc {
     font-family: 'OT Squeezed';
     font-size: 1.5rem;
-    font-weight: 700;
     line-height: 1.25;
     margin: 0 0 12px 0;
 }
@@ -846,7 +828,6 @@ body.card-cipher-page {
     text-decoration: none;
     font-family: 'OT Squeezed';
     font-size: 1.7rem;
-    font-weight: 600;
     letter-spacing: 0.5px;
     padding: 8px 26px;
     border-radius: 4px;
@@ -959,6 +940,15 @@ body.card-cipher-page {
     z-index: 1;
 }
 
+.rev-gothic-title {
+    position: relative;
+    z-index: 2;
+    font-family: 'IT Cathdra Demo';
+    font-size: 15rem;
+    color: #ffffff;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+}
+
 .rev-anatomy-section {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
@@ -968,10 +958,9 @@ body.card-cipher-page {
 }
 
 .rev-italic-text {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-style: italic;
-    font-size: 1.15rem;
-    line-height: 1.38;
+    font-family: 'AquilineTwo';
+    font-size: 2rem;
+    line-height: 0.75;
     color: #e2e2e2;
     margin: 0 0 20px 0;
 }
@@ -989,8 +978,10 @@ body.card-cipher-page {
 }
 
 .rev-heart-img {
-    width: 100%;
+    width: 17rem;
+    height: 17rem;
     display: block;
+    
     filter: grayscale(1) contrast(1.4);
 }
 
@@ -1018,11 +1009,10 @@ body.card-cipher-page {
     position: absolute;
     top: 16%;
     right: 26%;
-    font-family: 'Anton', Impact, sans-serif;
+    font-family: 'Druk Cond';
     font-size: 7.5rem;
     color: #ff0d0d;
     line-height: 1;
-    -webkit-user-select: none;
     user-select: none;
 }
 
@@ -1051,22 +1041,36 @@ body.card-cipher-page {
     text-align: center;
 }
 
+.rev-banner-red {
+    width: 100%;
+    padding: 20px 24px 28px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
 .rev-banner-red h2 {
-    font-family: 'Anton', Impact, sans-serif;
-    font-size: clamp(3.5rem, 11.8vw, 11rem);
+    font-family: 'Druk Cond', 'Anton', Impact, sans-serif;
+    font-size: 13.8vw;
+    font-weight: normal;
     color: #ff0808;
-    margin: 0;
-    line-height: 0.92;
-    letter-spacing: -1px;
+    margin-top: 5px;
+    line-height: 0.85;
+    letter-spacing: -0.01em;
     text-transform: uppercase;
-    transform: scaleY(1.22);
+    white-space: nowrap;
+    transform: scaleY(1.45);
+    transform-origin: center;
 }
 
 .rev-eyes-section {
     display: grid;
     grid-template-columns: 1.15fr 1fr;
     gap: 24px;
-    padding: 24px 48px 36px;
+    padding: 28px 48px 36px;
+    box-sizing: border-box;
     align-items: stretch;
 }
 
@@ -1094,9 +1098,8 @@ body.card-cipher-page {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Times New Roman', Georgia, serif;
-    font-weight: 700;
-    font-size: 1.75rem;
+    font-family: 'FL Prefere', serif;
+    font-size: 2.5rem;
     color: #ffffff;
     background-color: #050505;
     -webkit-user-select: none;
@@ -1104,25 +1107,29 @@ body.card-cipher-page {
 }
 
 .rev-statue-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .rev-statue-box img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
     display: block;
 }
 
 .rev-manifesto-footer {
     display: grid;
+    font-family: 'OT Squeezed';
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     padding: 12px 48px 64px;
-    font-size: 1.05rem;
+    font-size: 2.2rem;
     line-height: 1.42;
     color: #ececec;
     text-align: justify;
@@ -1146,5 +1153,135 @@ body.card-cipher-page {
     }
     .rev-heart-row {
         flex-direction: column;
+    }
+}
+
+.rev-missing-section {
+    display: block !important;
+    width: 100%;
+    padding: 24px 48px 36px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.missing-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.missing-carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.missing-carousel-track {
+    display: flex;
+    width: 100%;
+    gap: 28px;
+    transition: transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1);
+    will-change: transform;
+}
+
+.rev-poster-card {
+    flex: 0 0 calc((100% - 56px) / 3);
+    min-width: calc((100% - 56px) / 3);
+    background-color: #efefef;
+    padding: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.85);
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.rev-poster-card:hover {
+    transform: translateY(-4px);
+    filter: contrast(1.15);
+}
+
+.rev-poster-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(1) contrast(1.15);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(5, 5, 5, 0.85);
+    color: #ffffff;
+    border: 1px solid #444444;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.prev-poster {
+    left: -24px;
+}
+
+.next-poster {
+    right: -24px;
+}
+
+.carousel-btn:hover {
+    background-color: #ff0808;
+    border-color: #ff0808;
+    color: #050505;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #333333;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-dot.active {
+    background-color: #ff0808;
+    transform: scale(1.25);
+}
+
+@media (max-width: 900px) {
+    .rev-poster-card {
+        flex: 0 0 calc((100% - 28px) / 2);
+        min-width: calc((100% - 28px) / 2);
+    }
+}
+
+@media (max-width: 600px) {
+    .rev-missing-section {
+        padding: 20px 24px 28px;
+    }
+    .rev-poster-card {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+    .prev-poster {
+        left: -12px;
+    }
+    .next-poster {
+        right: -12px;
     }
 }
